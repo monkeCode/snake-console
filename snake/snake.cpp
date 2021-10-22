@@ -63,6 +63,7 @@ private:
     snake _playerSnake;
     bool _isGameLife = true;
     int _score = 0;
+    int _timePerFrames = 150;
     std::pair<int, int> _dir;
 
     //метод отрисовки поля и вывода в консоль
@@ -182,7 +183,7 @@ public:
             std::system("cls");
             logic();
             draw();
-            Sleep(500);
+            Sleep(_timePerFrames);
 	    }
         std::cout << "\ngame over";
     }
